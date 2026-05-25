@@ -1,0 +1,8 @@
+bin/
+coverage.out
+*.coverprofile
+*.test
+*.out
+
+.idea/
+.DS_Store
