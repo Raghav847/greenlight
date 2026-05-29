@@ -7,7 +7,7 @@ type Movie struct {
 	CreatedAt time.Time `json:"-"`                 //time for when added to DB
 	Title     string    `json:"title"`             //movie title
 	Year      int32     `json:"year,omitempty"`    //movie year
-	Runtime   int32     `json:"runtime,omitempty"` //movie runtime
+	Runtime   Runtime   `json:"runtime,omitempty"` //movie runtime
 	Genres    []string  `json:"genres,omitempty"`  //slices of genres
 	Version   int32     `json:"version"`           //increment when updated
 }
