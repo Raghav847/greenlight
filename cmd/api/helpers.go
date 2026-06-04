@@ -66,7 +66,7 @@ func (app *application) readJSON(w http.ResponseWriter, r *http.Request, dst any
 
 		case errors.As(err, &unmarshalTypeError):
 			if unmarshalTypeError.Field != "" {
-				return fmt.Errorf("body contains incorrect JSON type for feild %q", unmarshalTypeError.Field)
+				return fmt.Errorf("body contains incorrect JSON type for field %q", unmarshalTypeError.Field)
 			}
 			return fmt.Errorf("body contains incorrect JSON type (at character %d)", unmarshalTypeError.Offset)
 
